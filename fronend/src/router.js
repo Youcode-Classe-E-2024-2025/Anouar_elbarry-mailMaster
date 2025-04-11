@@ -1,8 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Dashboard from './views/dashboard.vue'
 import SubscribersList from './views/SubscribersList.vue'
+import CampaignsList from './views/CampaignsList.vue'
+import ListsPage from './views/ListsPage.vue'
 import CampaignCreate from './views/CampaignCreate.vue'
-import TemplateEditor from './views/TemplateEditor.vue'
 
 const routes = [
   {
@@ -16,14 +17,19 @@ const routes = [
     component: SubscribersList
   },
   {
+    path: '/CampaignsList',
+    name: 'CampaignsList',
+    component: CampaignsList
+  },
+  {
+    path: '/ListsPage',
+    name: 'ListsPage',
+    component: ListsPage
+  },
+  {
     path: '/CampaignCreate',
     name: 'CampaignCreate',
     component: CampaignCreate
-  },
-  {
-    path: '/TemplateEditor',
-    name: 'TemplateEditor',
-    component: TemplateEditor
   }
 ]
 
