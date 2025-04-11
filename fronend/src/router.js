@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Dashboard from './views/dashboard.vue'
 import SubscribersList from './views/SubscribersList.vue'
+import CampaignCreate from './views/CampaignCreate.vue'
 
 const routes = [
   {
@@ -12,6 +13,11 @@ const routes = [
     path: '/subscribers',
     name: 'SubscribersList',
     component: SubscribersList
+  },
+  {
+    path: '/CampaignCreate',
+    name: 'CampaignCreate',
+    component: CampaignCreate
   }
 ]
 

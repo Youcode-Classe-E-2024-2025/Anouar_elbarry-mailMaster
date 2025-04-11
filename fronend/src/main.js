@@ -13,5 +13,8 @@ app.component('dashboard',dashboard);
 import SubscribersList from './views/SubscribersList.vue'
 app.component('SubscribersList',SubscribersList);
 
+import CampaignCreate from './views/CampaignCreate.vue'
+app.component('CampaignCreate',CampaignCreate);
+
 app.use(router);
 app.mount('#app');
