@@ -13,11 +13,14 @@ app.component('dashboard',dashboard);
 import SubscribersList from './views/SubscribersList.vue'
 app.component('SubscribersList',SubscribersList);
 
+import CampaignsList from './views/CampaignsList.vue'
+app.component('CampaignsList',CampaignsList);
+
+import ListsPage from './views/ListsPage.vue'
+app.component('ListsPage',ListsPage);
+
 import CampaignCreate from './views/CampaignCreate.vue'
 app.component('CampaignCreate',CampaignCreate);
-
-import TemplateEditor from './views/TemplateEditor.vue'
-app.component('TemplateEditor',TemplateEditor);
 
 app.use(router);
 app.mount('#app');
