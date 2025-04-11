@@ -1,4 +1,5 @@
 import './assets/main.css'
+import router from './router'
 
 import { createApp } from 'vue'
 import App from './App.vue'
@@ -12,4 +13,5 @@ app.component('dashboard',dashboard);
 import SubscribersList from './views/SubscribersList.vue'
 app.component('SubscribersList',SubscribersList);
 
-app.mount('#app')
+app.use(router);
+app.mount('#app');
