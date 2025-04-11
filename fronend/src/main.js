@@ -16,5 +16,8 @@ app.component('SubscribersList',SubscribersList);
 import CampaignCreate from './views/CampaignCreate.vue'
 app.component('CampaignCreate',CampaignCreate);
 
+import TemplateEditor from './views/TemplateEditor.vue'
+app.component('TemplateEditor',TemplateEditor);
+
 app.use(router);
 app.mount('#app');
