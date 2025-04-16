@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\LoginRequest;
 use App\Http\Requests\RegisterUserRequest;
-use App\services\UserService;
+use App\Services\UserService;
 use Illuminate\Http\Request;
 class UserController extends Controller
 {
@@ -21,13 +22,12 @@ class UserController extends Controller
         if($user){
             return response()->json([
                 'message' => 'user registered seccussfully',
-                'User' => $user
+                'user' => $user
             ],201);
         }
-
-        return response()->json([
-            'message' => 'User registration failed. Email exists.'
-        ],422);
+            return response()->json([
+                'message' => 'User registration failed. Email exists.'
+            ],422);     
         }
     public function login(LoginRequest $request){
         $validated = $request->validated();
