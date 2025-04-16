@@ -152,7 +152,6 @@
 
 <script>
 import axios  from 'axios';
-import { errorMessages } from 'vue/compiler-sfc';
 
 export default {
     name: 'Auth',
