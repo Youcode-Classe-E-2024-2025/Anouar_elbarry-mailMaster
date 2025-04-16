@@ -1,6 +1,6 @@
 <?php
 
-namespace App\services;
+namespace App\Services;
 use App\Models\User;
 use Hash;
 use Illuminate\Support\Facades\Auth;
@@ -9,9 +9,9 @@ class UserService
     protected $userRepository;
     public function register(array $userData)
     {
-        if($this->userRepository->isEmailUnique($userData['email'])){
+        if(User::where('email',$userData['email'])->doesntExist()){
            $userData['password'] = bcrypt($userData['password']);
-           $user = $this->userRepository->createUser($userData);
+           $user = User::create($userData);
            return $user;
         }
         return false;
