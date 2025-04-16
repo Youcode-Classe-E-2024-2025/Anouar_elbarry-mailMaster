@@ -4,6 +4,7 @@ import SubscribersList from './views/SubscribersList.vue'
 import CampaignsList from './views/CampaignsList.vue'
 import ListsPage from './views/ListsPage.vue'
 import CampaignCreate from './views/CampaignCreate.vue'
+import Auth from './views/auth.vue'
 
 const routes = [
   {
@@ -30,6 +31,11 @@ const routes = [
     path: '/CampaignCreate',
     name: 'CampaignCreate',
     component: CampaignCreate
+  },
+  {
+    path: '/Auth',
+    name: 'Auth',
+    component: Auth
   }
 ]
 
